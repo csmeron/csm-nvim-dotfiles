@@ -1,25 +1,33 @@
 return {
   {
+    "mfussenegger/nvim-lint",
+    opts = require "configs.lint",
+  },
+  {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
+    event = 'BufWritePre', -- uncomment for format on save
     opts = require "configs.conform",
   },
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "isort",
+        "black",
+        "mypy",
+        "ruff",
+        "pyright",
+        "prettier",
+        "prettierd",
+        "stylua",
 
-  -- These are some examples, uncomment them if you want to see them work!
+      }
+    },
+  },
   {
     "neovim/nvim-lspconfig",
     config = function()
       require "configs.lspconfig"
     end,
   },
-
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
 }
