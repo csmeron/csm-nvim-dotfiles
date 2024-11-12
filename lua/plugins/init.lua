@@ -1,11 +1,11 @@
 return {
-  {
-    "mfussenegger/nvim-lint",
-    -- opts = require "configs.lint",
-    config = function()
-      require "configs.lint"
-    end,
-  },
+  -- {
+  --   "mfussenegger/nvim-lint",
+  --   -- opts = require "configs.lint",
+  --   config = function()
+  --     require "configs.lint"
+  --   end,
+  -- },
   {
     "stevearc/conform.nvim",
     event = "BufWritePre", -- uncomment for format on save
@@ -28,8 +28,14 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
+    dependencies = {
+      "williamboman/mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
+    },
     config = function()
       require "configs.lspconfig"
     end,
   },
+
+  -- null-ls for ruff, mypy
 }
