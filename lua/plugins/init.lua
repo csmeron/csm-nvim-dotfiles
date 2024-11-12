@@ -1,13 +1,10 @@
 return {
   {
     "mfussenegger/nvim-lint",
-    opts = require "configs.lint",
-    -- vim.api.nvim_create_autocmd("BufWritePost", {
-    --   pattern = "*.py", --match python files
-    --   callback = function()
-    --     require("nvim-lint").try_lint()
-    --   end,
-    -- })
+    -- opts = require "configs.lint",
+    config = function()
+      require "configs.lint"
+    end,
   },
   {
     "stevearc/conform.nvim",
