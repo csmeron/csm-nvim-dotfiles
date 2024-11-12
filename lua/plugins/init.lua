@@ -23,6 +23,7 @@ return {
         "prettier",
         "prettierd",
         "stylua",
+        "debugpy",
       },
     },
   },
