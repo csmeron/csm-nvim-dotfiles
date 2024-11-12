@@ -31,12 +31,12 @@ dofile(vim.g.base46_cache .. "statusline")
 
 require "options"
 require "nvchad.autocmds"
-vim.api.nvim_create_autocmd("BufWritePost", {
-  pattern = "*.py", --match python files
-  callback = function()
-    require("nvim-lint").try_lint()
-  end,
-})
+-- vim.api.nvim_create_autocmd("BufWritePost", {
+--   pattern = "*.py", --match python files
+--   callback = function()
+--     require("nvim-lint").try_lint()
+--   end,
+-- })
 
 vim.schedule(function()
   require "mappings"
