@@ -24,7 +24,6 @@ return {
         "prettierd",
         "stylua",
         "debugpy",
-        "glow",
       },
     },
   },
