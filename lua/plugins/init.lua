@@ -24,8 +24,14 @@ return {
         "prettierd",
         "stylua",
         "debugpy",
+        "glow",
       },
     },
+  },
+  {
+    "ellisonleao/glow.nvim",
+    config = true,
+    cmd = "Glow",
   },
   {
     "neovim/nvim-lspconfig",
@@ -37,6 +43,5 @@ return {
       require "configs.lspconfig"
     end,
   },
-
   -- null-ls for ruff, mypy
 }
